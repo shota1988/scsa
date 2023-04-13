@@ -12,7 +12,7 @@ driver.get("https://the-internet.herokuapp.com/")
 try:
     driver.find_element(By.LINK_TEXT, "File Upload").click()
     file_input = driver.find_element(By.ID, "file-upload")
-    file_input.send_keys("C:/Users/shota/Desktop/scsa/qa.png")
+    file_input.send_keys("https://github.com/shota1988/scsa/blob/main/qa.png")
     file_input = driver.find_element(By.ID, "file-submit").click()
     result = driver.find_element(By.ID, "content").text
     assert 'File Uploaded!' in result
