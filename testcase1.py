@@ -19,7 +19,7 @@ try:
 
 except: AssertionError:\
     print("not expected result")
-sleep(5)
+sleep(4)
 driver.close()
 
 
@@ -40,5 +40,5 @@ except Exception as FileExistsCheck:
         print("File not found. Please provide a valid file path.")
     else:
         print("Other Error occurred")  # other Error which we we are not expecting(wrong url wrong code and etc)
-sleep(5)
+sleep(4)
 driver.close()
