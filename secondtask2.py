@@ -10,14 +10,16 @@ class Main(unittest.TestCase):
         self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         self.driver.get("https://the-internet.herokuapp.com/")
         self.driver.implicitly_wait(5)
+        cookies = self.driver.get_cookies()
+        print(cookies)
+
 
     def test_Download(self):
         self.driver.find_element(By.LINK_TEXT, "File Download").click()
         self.driver.implicitly_wait(5)
         self.driver.find_element(By.LINK_TEXT, "some-file.txt").click()
         self.driver.implicitly_wait(5)
-        cookies = self.driver.get_cookies()
-        print(cookies)
+
 
 
     def close_WD(self) -> None:
